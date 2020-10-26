@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: monospace
+}
+.container{
+    padding: 10rem;
+    background-color: rgb(55, 70, 75);
+    color: white;
+    margin: 2rem 2rem;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px double black;
+}
+.heading{
+    width: 90vw;
+    padding: 5rem 0 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+}
+p{
+    width: 70vw;
+    text-align: center;
+    padding: 0 0 2rem 0;
+}
+.btn{
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 2rem 0 0 0.5rem;
+    color: white;
+    padding: 0.5rem 2rem;
+    background-color: teal;
+    border-radius: 5px;
+    border: 1px solid white;
+    outline: none;
+}
+.btn:hover{
+    background-color: #17af9b;
+}
+
+/* Setplayer */
+input{
+    margin: 2rem;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    outline: none;
+    border-radius: 10px;
+}
+
+/* Game page */
+.update{
+    padding: 5rem;
+}
+h2{
+    width: 90vw;
+    text-align: center;
+    font-size: 2rem;
+    padding:0 0 2rem 0;
+    text-transform: capitalize;
+    letter-spacing: 0.3rem;
+}
+span{
+    color: rgb(94, 228, 228);
+}
+.info{
+    padding-bottom: 0;
+}
+.gold{
+    color: gold;;
+}
+.fail{
+    color: red;
+}
+.bg-gold{
+    background-color: rgb(252, 236, 149);
+    color: black
+}
+.game{
+    row-gap: 0;
+    border: solid 1px white;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.box, .newbox{
+    width: 100px;
+    height: 100px;
+    border: white solid 1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nixie One', cursive;
+    font-size: 3rem;
+}
+.box:hover{
+    background-color: #46595f;  
+}
+.newbox{
+    opacity: 0.5;
+    cursor: default;
+}
+/* scoreboard */
+.sb{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.scoreboard{
+    display: grid;
+    border: 1px solid;
+    width: 70vw;
+    grid-template-columns: 35vw 35vw;
+    grid-template-rows: 1fr 1fr;
+    /* justify-content: space-around; */
+}
+h3{
+    text-transform: capitalize;
+    text-align: center;
+    width: 35vw;
+    padding: 1rem;
+    font-size: 1.5rem;
+    height: 6vh;
+    line-height: 1.2rem;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-bottom: solid 1px;
+}
+.score{
+    padding: 0;
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 35vw;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+}
+.btns{
+    margin-top: 1rem;
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+}
+/* Responsive */
+@media(max-width: 370px){
+    .box, .newbox{
+        width: 60px;
+        height: 60px;
+    }
+}
+@media(max-height: 350px){
+    html{
+        font-size: 50%;
+    }
+    .box, .newbox{
+        font-size: 5rem;
+    }
+}
+@media(max-height: 580px){
+    .container{
+        padding: 2rem;
+    }
+    .box, .newbox{
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .game{
+        margin: 1rem 0 0 0;
+    }
+    h3{
+        padding-bottom: 2rem;
+    }
+    .score{
+        font-size: 2rem;
+    }
+}
